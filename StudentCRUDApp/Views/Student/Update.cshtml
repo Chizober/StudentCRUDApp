@@ -1,0 +1,50 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Update";
+}
+<a asp-action="Index">View All Students</a>
+<h2>Update</h2>
+<form method="post">
+    <p>
+        <label asp-for="FullName">Your FullName:</label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName"></span>
+    </p>
+    <p>
+        <label asp-for="Age">Your Age:</label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+    </p>
+    <p>
+        <label asp-for="Regno">Your Regno:</label>
+        <input asp-for="Regno" />
+        <span asp-validation-for="Regno"></span>
+    </p>
+    <p>
+        <label asp-for="Courses">Your Courses:</label>
+        <input asp-for="Courses" />
+        <span asp-validation-for="Courses"></span>
+    </p>
+    <p>
+        <label asp-for="Address">Address:</label>
+        <input asp-for="Address"/>
+        <span asp-validation-for="Address"></span>
+    </p>
+    <p>
+        <label asp-for="Sex">Your Sex:</label>
+        <input type="radio" asp-for="Sex" value="M" />Male
+        <input type="radio" asp-for="Sex" value="F" />Female
+        <span asp-validation-for="Sex"></span>
+    </p>
+    <p>
+        <label asp-for="Department">Your Department:</label>
+        <select asp-for="Department">
+            <option value="Statistics">Statistics</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Computer Science">Computer Science</option>
+        </select>
+        <span asp-validation-for="Department"></span>
+    </p>
+    <p><button type="submit">Submit</button></p>
+</form>
+

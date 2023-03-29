@@ -1,0 +1,54 @@
+﻿
+  @model Student
+ @{
+    ViewData["Title"] = "Create";
+}
+<a asp-action="Index">View All Students</a>
+<h2>Create</h2>
+<form method="post" class="w-50">
+    <div class="mb-3">
+        <label asp-for="FullName" class="form-label">FullName:</label>
+        <input asp-for="FullName" class="form-control" placeholder="FullName">
+        <span asp-validation-for="FullName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Age" class="form-label">Age:</label>
+        <input asp-for="Age" class="form-control" placeholder="Age">
+        <span asp-validation-for="Age"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Address" class="form-label">Address:</label>
+        <input asp-for="Address" class="form-control" placeholder="your Address">
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Regno" class="form-label">Regno:</label>
+        <input asp-for="Regno" class="form-control" placeholder="your Registration Number">
+        <span asp-validation-for="Regno"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Courses" class="form-label">Courses:</label>
+        <input asp-for="Courses" class="form-control" placeholder="your Courses">
+        <span asp-validation-for="Courses"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Sex">Your Sex:</label>
+        <input type="radio" asp-for="Sex" value="M" />Male
+        <input type="radio" asp-for="Sex" value="F" />Female
+        <span asp-validation-for="Sex"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Department">Your Department:</label>
+        <select asp-for="Department">
+            <option value="Statistics">Statistics</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Computer Science">Computer Science</option>
+        </select>
+        <span asp-validation-for="Department"></span>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit">Submit</button>
+    </div>
+</form>
